@@ -47,6 +47,6 @@ jobs:
           aws-region: "ap-southeast-2"
       - name: Deploy to S3
         run: aws s3 sync . s3://${{ secrets.TEST_BUCKET_NAME }} # TODO: add secrets to repo
-        working-directory: cannabizelite-dev-build
+        working-directory: cannabizelite-test-build
       - name: Invalidate CloudFront Distribution  
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.TEST_DISTRIBUTION_ID }} --paths "/*" #TODO: add secrets to repo
