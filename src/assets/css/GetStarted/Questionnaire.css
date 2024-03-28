@@ -1,0 +1,153 @@
+.questionnaire-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 80px;
+  overflow: hidden;
+}
+.let-us-know {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--gray-900, #111827);
+}
+.reasoning-for-seeking {
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 400;
+}
+.let-us-know,
+.reasoning-for-seeking {
+  align-self: stretch;
+  position: relative;
+  line-height: 150%;
+}
+.select-one {
+  flex: 1;
+  position: relative;
+  line-height: 150%;
+  display: none;
+}
+.icon-chevron-down {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+}
+.input,
+.select {
+  align-self: stretch;
+  display: flex;
+}
+.select {
+  background-color: var(--white);
+  border: 1px solid var(--color-gray-100);
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--padding-xs);
+  gap: var(--gap-base);
+  color: var(--neutral-dark-gray);
+}
+.input {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.label,
+.label {
+  line-height: 150%;
+}
+
+.content {
+  align-self: stretch;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-5xl);
+}
+
+.type-your-message {
+  font-family: Nunito Sans;
+  flex: 1;
+  position: relative;
+  line-height: 150%;
+  z-index: 0;
+}
+.text-area-child,
+.text-area-item {
+  position: absolute;
+  margin: 0 !important;
+  right: 1.17px;
+  bottom: 5.76px;
+  width: 2.83px;
+  height: 0;
+  z-index: 1;
+}
+.text-area-item {
+  right: -4.49px;
+  bottom: 10px;
+  width: 8.49px;
+  z-index: 2;
+}
+.input4,
+.text-area {
+  align-self: stretch;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text-area {
+  box-sizing: border-box;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-xs);
+  position: relative;
+  color: var(--neutral-dark-gray);
+  border-radius: 4px;
+  border: 1px solid var(--gray-300, #d1d5db);
+  background: var(--neutal-white, #fff);
+  outline: none;
+}
+.input4 {
+  flex-direction: column;
+  gap: var(--gap-5xs);
+  color: var(--black);
+}
+.fields-are-mandatory {
+  align-self: stretch;
+  position: relative;
+  line-height: 150%;
+  color: #6b7280;
+}
+.button,
+.button2 {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-5xl);
+}
+.button {
+  display: none;
+}
+.button2 {
+  background-color: var(--gray-900);
+  display: flex;
+  color: var(--white);
+}
+.button-parent,
+.form {
+  display: flex;
+  gap: var(--gap-5xl);
+}
+.button-parent {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: var(--gray-900);
+}

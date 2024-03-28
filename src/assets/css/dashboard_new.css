@@ -1,0 +1,14 @@
+span.app-status-title {
+  /* Heading/Semi-Bold/XS */
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 18px */
+}
+
+.card-item-value {
+  font-weight: 600;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}

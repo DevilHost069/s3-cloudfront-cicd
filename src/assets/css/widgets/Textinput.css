@@ -1,0 +1,23 @@
+.placeholder {
+  flex: 1;
+  position: relative;
+  line-height: 150%;
+  font-style: italic;
+}
+.text-input {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-xs);
+  text-align: left;
+  font-size: var(--text-regular-normal-size);
+
+  color: var(--gray-800);
+
+  font-family: var(--text-regular-normal);
+  align-self: stretch;
+}

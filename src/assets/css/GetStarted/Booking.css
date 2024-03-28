@@ -1,0 +1,143 @@
+.book-a-nurse {
+  align-self: stretch;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+.available-nurse,
+.book-a-nurse,
+.select-one {
+  position: relative;
+  line-height: 150%;
+}
+.available-nurse {
+  align-self: stretch;
+}
+.select-one {
+  flex: 1;
+  display: none;
+}
+.icon-chevron-down {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.input,
+.select {
+  align-self: stretch;
+  display: flex;
+}
+.select {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--padding-xs);
+  gap: var(--gap-base);
+  color: var(--neutral-dark-gray);
+}
+.input {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.icon-chevron-down1 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+}
+.select1 {
+  background-color: var(--white);
+  border: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 122px;
+  height: 122px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--padding-xs);
+  gap: var(--gap-base);
+}
+.frame-parent,
+.input1,
+.select-parent {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.select-parent {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-xl);
+}
+.frame-parent,
+.input1 {
+  flex-direction: column;
+}
+.frame-parent {
+  display: flex;
+  gap: var(--gap-xl);
+  color: var(--neutral-dark-gray);
+}
+.input1 {
+  align-self: stretch;
+  display: none;
+  gap: var(--gap-5xs);
+}
+.available-time-slot {
+  position: relative;
+  line-height: 150%;
+}
+
+.content {
+  align-self: stretch;
+  flex-direction: row;
+  gap: var(--gap-5xl);
+}
+
+.type-your-message {
+  flex: 1;
+  position: relative;
+  line-height: 150%;
+  z-index: 0;
+}
+
+.book-consultation {
+  position: absolute;
+  top: 120px;
+  left: calc(50% - 173px);
+  font-size: 40px;
+  line-height: 20px;
+  text-transform: capitalize;
+  font-family: var(--font-inter);
+  color: var(--color-gray-200);
+}
+
+/* [data-fob-field-name="name"],
+[data-fob-field-name="email"] {
+  display: none;
+} */
+
+/* data-fob-field-name */
+[data-fob-field-name="name"],
+[data-fob-field-name="email"] {
+  display: none;
+}
+.input.book-consultation-nurse {
+  width: 50%;
+  margin-left: auto;
+  margin-right: "auto";
+  margin-bottom: "3rem";
+}
+@media screen and (max-width: 576px) {
+  .input.book-consultation-nurse {
+    width: unset;
+  }
+}

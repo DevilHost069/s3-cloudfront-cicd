@@ -1,0 +1,45 @@
+@import "assets/scss/override";
+
+.min-w-full {
+  min-width: 100%;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.pt-prescriber-list{
+  padding-top: 3.225rem;
+}
+.pt-prescriber-assigned-list{
+  padding-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-md-30-24 {
+    padding: "30px 24px";
+  }
+}
+@media screen and (max-width: 768px) {
+  .pt-prescriber-list{
+    padding-top: 0;
+  }
+  .max-w-md-full{
+    width: 100%;
+  }
+}
+.hide-caret.dropdown-menu:before,
+.hide-caret.dropdown-menu:after {
+  display: none;
+}
+.barcode-container > svg{
+  max-width: 100%;
+}
+.fc .fc-daygrid-day.fc-day-today, .fc .fc-timegrid-col.fc-day-today{
+  background-color: rgba(var(--bs-primary-rgb),  0.2);
+}
+.fc-v-event {
+  background-color: var(--bs-primary);
+  border: 1px solid var(--bs-primary);
+  display: block;
+}
+.break-word{
+  word-wrap: break-word;
+}

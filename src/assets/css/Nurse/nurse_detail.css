@@ -1,0 +1,81 @@
+* {
+  /* color: #6b7280; */
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+}
+
+.detail-button {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  height: 48px;
+}
+
+.danger-button {
+  color: #7f1d1d;
+  border: 1px solid #7f1d1d;
+}
+.primary-button {
+  color: var(--bs-primary-500);
+  border: 1px solid var(--bs-primary-500);
+}
+
+.card-title {
+  color: var(--primary-500, var(--bs-primary-500));
+  font-variant-numeric: lining-nums tabular-nums;
+  /* Heading/Bold/LG */
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 27px */
+}
+
+.card-icon {
+  width: 24px;
+  height: 24px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.medical-detail-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+@media (min-width: 768px) {
+  .card-key {
+    color: var(--gray-500, #6b7280);
+    max-width: 200px;
+  }
+}
+.card-value {
+  color: var(--gray-950, #030712);
+}
+
+.card-question {
+  color: var(--gray-500, #6b7280);
+}
+
+.card-answer {
+  color: var(--gray-950, #030712);
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,28 @@
+.label,
+.radio {
+  position: relative;
+}
+.radio {
+  border-radius: var(--br-81xl);
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.label {
+  line-height: 150%;
+}
+.selectedfalse {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+  text-align: left;
+  font-size: var(--text-regular-normal-size);
+  color: var(--black);
+  font-family: var(--text-regular-normal);
+}

@@ -1,0 +1,52 @@
+name: TEST ECS  CI/CD
+on:
+  workflow_dispatch: # added for manual running.
+  push:
+    branches: [main] # TODO: add branch name here
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+      - name: Add SHORT_SHA env property with commit short sha
+        run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
+      - name: Setup Node JS 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - name: Install dependencies
+        run: yarn install
+      - name: Generate build
+        run: CI=false yarn build
+        env:
+          REACT_COMMIT_HASH: ${SHORT_SHA}
+          VITE_API_URL: https://dev-api-ecs.cannabizelite.com.au
+          VITE_GOOGLE_PLACES_API_KEY: AIzaSyD1cPNKp8TrNHn3ieDi4YgWigCcMqah_FE
+          VITE_APP_ENV: dev
+      - name: Share artifact inside workflow
+        uses: actions/upload-artifact@v1
+        with:
+          name: cannabizelite-test-build
+          path: dist
+  Deploy:
+    runs-on: ubuntu-latest
+    needs: Build
+    steps:
+      - name: Get artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: cannabizelite-test-build
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }} # TODO: add secrets to repo
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # TODO: add secrets to repo
+          aws-region: "ap-southeast-2"
+      - name: Deploy to S3
+        run: aws s3 sync . s3://${{ secrets.TEST_BUCKET_NAME }} # TODO: add secrets to repo
+        working-directory: cannabizelite-dev-build
+      - name: Invalidate CloudFront Distribution  
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.TEST_DISTRIBUTION_ID }} --paths "/*" #TODO: add secrets to repo

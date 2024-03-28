@@ -1,0 +1,65 @@
+.image-3-icon,
+.image-4-icon,
+.image-5-icon {
+  position: relative;
+  width: 100%;
+  height: 908px;
+  object-fit: cover;
+}
+.image-3-icon,
+.image-4-icon {
+  height: 629.33px;
+}
+.image-4-icon {
+  height: 780px;
+}
+.website,
+.website-nav-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.website {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.website-nav-icon {
+  width: 100%;
+  height: 116px;
+  object-fit: cover;
+}
+.clinic-website {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 2317px;
+  overflow: hidden;
+}
+
+.website-hero {
+  width: 100%;
+  background-color: #fafaf5;
+}
+.heroicon {
+  position: relative;
+  width: 70%;
+  height: 100vh;
+  object-fit: scale-down;
+  /* center */
+  margin: 0 auto;
+  /* center */
+  display: flex;
+}
+
+h1[class="title"] {
+  font-size: 45px;
+  font-weight: 800;
+  line-height: 49.5px;
+  letter-spacing: normal;
+  margin-top: 5rem;
+  color: #000;
+  text-align: center;
+  font-family: "Nunito Sans";
+}

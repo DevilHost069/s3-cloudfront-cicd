@@ -1,0 +1,17 @@
+.button {
+  position: relative;
+  line-height: 100%;
+}
+.styleprimary-smallfalse-da {
+  background-color: var(--black);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-5xl);
+  text-align: left;
+  font-size: var(--text-regular-normal-size);
+  color: var(--white);
+  font-family: var(--text-regular-normal);
+  height: 48px;
+}

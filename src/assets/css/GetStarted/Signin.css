@@ -1,0 +1,53 @@
+.form_signin {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding: 40px;
+  box-shadow:
+    0px 1px 2px 0px rgba(0, 0, 0, 0.06),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main_login {
+  max-height: auto;
+}
+
+.img_col {
+  display: none;
+}
+
+/* resolution 992px then set bg image */
+@media (max-width: 991px) {
+  .login_section {
+    width: 100%;
+    background-image: url("/src/assets/img/hannahmed_signin_img.jpg");
+    background-repeat: no-repeat;
+    /* full image cover */
+    background-size: cover;
+  }
+
+  .bg_img {
+    width: 100%;
+  }
+}
+.bg_img {
+  z-index: 2;
+}
+
+/* responsive below 600px */
+@media (max-width: 600px) {
+  .form_signin {
+    padding-left: var(--padding-2xl);
+    padding-right: var(--padding-2xl);
+  }
+  .login_section > .row.w-full {
+    --bs-gutter-x: 0;
+  }
+  .form_signin {
+    margin-top: clamp(135px, 10vw, 1000px);
+  }
+}

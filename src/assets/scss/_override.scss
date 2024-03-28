@@ -1,0 +1,118 @@
+// import custom variables
+@import "./hannahmed_variables.scss";
+
+// required imports
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// set custom colors
+$custom-colors: (
+  "primary": $primary,
+  "primary-400": $primary-400,
+  "primary-500": $primary-500,
+  "primary-900": $primary-900,
+  "secondary-50": $secondary-50,
+  "gray-50": $gray-50,
+  "gray-200": $gray-200,
+  "gray-500": $gray-500,
+  "gray-700": $gray-700,
+  "gray-950": $gray-950,
+  "gray-900": $gray-900,
+  "slate-50": $slate-50,
+  "slate-100": $slate-100,
+  "slate-400": $slate-400,
+  "success-50": $success-50,
+  "success-700": $success-700,
+  "success-900": $success-900,
+  "warning-50": $warning-50,
+  "warning-700": $warning-700,
+  "info-50": $info-50,
+  "info-700": $info-700,
+  "blue-50": $blue-50,
+  "blue-700": $blue-700,
+  "danger-50": $danger-50,
+  "danger-700": $danger-700,
+);
+
+// merge maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+//change font family
+$font-family-sans-serif:
+  Nunito Sans,
+  sans-serif;
+$border-color-translucent: $gray-200;
+
+//override headings variables
+$h5-font-size: 1.125rem;
+$headings-font-weight: 700;
+$headings-line-height: 1.5;
+
+$table-striped-bg: $slate-100;
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+.nav {
+  --bs-nav-link-color: var(--bs-gray-50);
+  --bs-nav-link-hover-color: var(--bs-gray-50);
+  --bs-nav-link-font-weight: 600;
+  --bs-nav-link-padding-x: 1rem;
+  --bs-nav-link-padding-y: 0.5rem;
+}
+.nav-pills {
+  --bs-nav-pills-border-radius: var(--bs-border-radius);
+  --bs-nav-pills-link-active-color: var(--bs-primary-900);
+  --bs-nav-pills-link-active-bg: var(--bs-secondary-50);
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    --bs-modal-width: 710px;
+  }
+  .modal-xl {
+    --bs-modal-width: 1024px;
+  }
+}
+.modal-fullscreen .modal-content {
+  overflow-y: auto;
+  
+}
+.btn-outline-primary {
+  --bs-btn-hover-color: var(--bs-secondary-50);
+}
+.btn.btn-primary {
+  --bs-btn-color: var(--bs-secondary-50);
+  --bs-btn-hover-color: var(--bs-secondary-50);
+}
+.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+  color: var(--bs-secondary-50);
+}
+.btn:disabled, .btn.disabled, fieldset:disabled .btn{
+  color: var(--bs-secondary-50);
+}
+.dropdown-menu:before, .dropdown-menu:after {
+  content: unset !important;
+}
+.main-content-container{
+  padding: 55px 40px;
+}
+
+@media (max-width: 768px) {
+  nav.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 9;
+  }
+  .main-content-container{
+    padding: 10px 16px;
+  }
+  .medications-title-container{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .modal-content{
+    padding: 28px;
+    min-height: 200px;
+  }
+}
+
+
+$tooltip-bg: $primary-500;

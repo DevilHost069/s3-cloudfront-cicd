@@ -1,0 +1,28 @@
+.select-one {
+  flex: 1;
+  position: relative;
+  line-height: 150%;
+}
+.icon-chevron-down {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.select {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-xs);
+  gap: var(--gap-base);
+  text-align: left;
+  font-size: var(--text-regular-normal-size);
+  color: var(--neutral-dark-gray);
+  font-family: var(--text-regular-normal);
+  align-self: stretch;
+}

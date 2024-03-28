@@ -1,0 +1,111 @@
+.notification-list {
+  border-radius: 2px;
+  box-shadow:
+    0px 9px 28px 0px rgba(0, 0, 0, 0.05),
+    0px 6px 16px 0px rgba(0, 0, 0, 0.08),
+    0px 3px 6px 0px rgba(0, 0, 0, 0.12);
+}
+.notification-header .notification-title {
+  font-variant-numeric: lining-nums tabular-nums;
+
+  /* Typography/FontSans/Medium/SM */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 21px */
+}
+.notification-header .mark-as-read {
+  color: var(--gray-500, #6b7280);
+  text-align: right;
+  font-variant-numeric: lining-nums tabular-nums;
+
+  /* Heading/Regular/XS */
+  font-family: Nunito Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+}
+.notification-item,
+.notification-header {
+  border-bottom: 0.5px solid var(--gray-100);
+}
+.notification-item .notification-title {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 21px */
+}
+.notification-item .notification-title .new-badge {
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 15px */
+}
+.notification-item .notification-body {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+.notification-item .notification-time {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+}
+.z-10 {
+  z-index: 10;
+}
+.mark-as-read-single {
+  right: 30px;
+}
+.unread-count {
+  background: #eb5b49;
+  text-align: center;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 12px */
+  border-radius: 50%;
+  padding: 4px 7px;
+  position: absolute;
+  top: -6px;
+  right: 8px;
+}
+.dropdown-menu:before {
+  right: 15px;
+  top: -16px;
+  border: 8px solid #0000;
+  border-bottom: 8px solid #000;
+}
+
+.dropdown-menu:after {
+  right: 16px;
+  top: -14px;
+  border: 7px solid #0000;
+  border-bottom: 7px solid #000;
+}
+
+.dropdown-menu:before,
+.dropdown-menu:after {
+  content: "";
+  left: auto;
+  display: inline-block;
+  position: absolute;
+}
+
+@media screen and (max-width: 500px) {
+  .dropdown-menu.show {
+    left: -65vw;
+  }
+}
