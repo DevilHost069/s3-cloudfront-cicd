@@ -23,7 +23,7 @@ jobs:
         run: CI=false yarn build
         env:
           REACT_COMMIT_HASH: ${SHORT_SHA}
-          VITE_API_URL: https://dev-api-ecs.cannabizelite.com.au
+          VITE_API_URL: https://api-ecs.cannabizelite.com.au
           VITE_GOOGLE_PLACES_API_KEY: AIzaSyD1cPNKp8TrNHn3ieDi4YgWigCcMqah_FE
           VITE_APP_ENV: dev
       - name: Share artifact inside workflow
